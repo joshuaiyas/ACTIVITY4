@@ -81,7 +81,7 @@ VALUES
 (9, 9, '2023-05-02', 'Allergies'),
 (10, 10, '2023-05-20', 'Eye Irritation');
 
-NSERT INTO doctors(doctorid, dfirstname, dlastname, speciality, phone, email)
+INSERT INTO doctors(doctorid, dfirstname, dlastname, speciality, phone, email)
 VALUES
 (1, 'Dr.Maria', 'Santos', 'General Veterinarian', '987-654-3210', 'maria@example.com'),
 (2, 'Dr.Antonio', 'Gonzales', 'Feline Specialist', '555-123-4567', 'antonio@example.com'),
@@ -117,3 +117,6 @@ VALUES
 
 ALTER TABLE owners
 ADD COLUMN registereddate DATE;
+
+ALTER TABLE invoices
+RENAME COLUMN paymentdate TO paymenttime;
