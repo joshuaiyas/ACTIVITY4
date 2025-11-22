@@ -124,3 +124,6 @@ RENAME COLUMN paymentdate TO paymenttime;
 UPDATE doctors
 SET dlastname = 'Reyes-Gonzales'
 WHERE dfirstname = 'Sofia' AND dlastname = 'Reyes';
+
+SELECT DISTINCT species
+FROM animals;
