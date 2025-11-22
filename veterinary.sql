@@ -33,3 +33,12 @@ CREATE Table doctors (
     phone VARCHAR(15),
     email VARCHAR(100)
     );
+    CREATE TABLE medicalrecords(
+        recordid PRIMARY KEY,
+        FOREIGN Key (animalid) REFERENCES animals(animalid),
+        recordate DATE,
+        FOREIGN KEY (doctorid) REFERENCES doctors(doctorid),
+        diagnosis VARCHAR (255),
+        prescription VARCHAR (255),
+        notes VARCHAR (255)
+    );
