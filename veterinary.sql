@@ -34,7 +34,7 @@ CREATE Table doctors (
     email VARCHAR(100)
     );
     CREATE TABLE medicalrecords(
-        recordid PRIMARY KEY,
+        recordid INT PRIMARY KEY,
         FOREIGN Key (animalid) REFERENCES animals(animalid),
         recordate DATE,
         FOREIGN KEY (doctorid) REFERENCES doctors(doctorid),
@@ -42,3 +42,16 @@ CREATE Table doctors (
         prescription VARCHAR (255),
         notes VARCHAR (255)
     );
+    -- Step 17: Populate the 'owners' table with 10 rows of data.
+INSERT INTO owners (ownerid, ofirstname, olastname, address, phone, email)
+VALUES
+(1, 'Maria', 'Dela Cruz', '123 Main St, Manila', '0917-111-2222', 'maria.d@email.com'),
+(2, 'Jose', 'Rizal', '456 Oak Ave, Davao', '0917-333-4444', 'jose.r@email.com'),
+(3, 'Lina', 'Torres', '789 Elm Rd, Cebu', '0917-555-6666', 'lina.t@email.com'),
+(4, 'David', 'Lim', '101 Pine Ln, Baguio', '0917-777-8888', 'david.l@email.com'),
+(5, 'Elena', 'Ramos', '202 Cedar Pl, Iloilo', '0917-999-0000', 'elena.r@email.com'),
+(6, 'Mario', 'Gomez', '303 Birch Dr, Bacolod', '0917-101-2020', 'mario.g@email.com'),
+(7, 'Sofia', 'Mendoza', '404 Maple Cir, Palawan', '0917-303-4040', 'sofia.m@email.com'),
+(8, 'Carlos', 'Villanueva', '505 Poplar Ct, Pampanga', '0917-505-6060', 'carlos.v@email.com'),
+(9, 'Isabel', 'Reyes', '606 Willow Bend, Bataan', '0917-707-8080', 'isabel.r@email.com'),
+(10, 'Ben', 'Aquino', '707 Aspen Blvd, Tarlac', '0917-909-0101', 'ben.a@email.com');
